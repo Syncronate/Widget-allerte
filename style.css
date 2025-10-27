@@ -1,91 +1,102 @@
-/* --- CSS Completo per Nuovo Layout --- */
+/* --- CSS Completo per Layout Avanzato --- */
 
-/* --- Reset Globale --- */
+/* --- Reset e Font --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* --- Setup del Body --- */
-html, body {
-    width: 100%;
-    height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
-    overflow: hidden;
-    padding: 8px; /* Mantiene una piccola cornice nera */
 }
 
 /* --- Contenitore Principale --- */
-.container {
+.schermo {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    gap: 8px;
+    padding: 15px;
+    gap: 15px;
+    overflow: hidden;
 }
 
-/* --- Box della Singola Allerta --- */
+/* --- 1. Barra Laterale Sinistra --- */
+.sidebar {
+    flex-basis: 25%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.orologio { font-size: 5vh; font-weight: bold; }
+.orologio #data, .orologio #ora { display: block; }
+.titolo-sidebar .allerta-meteo { color: #CC3333; font-size: 4vh; font-weight: bold; }
+.titolo-sidebar .protez-civile { font-size: 3.5vh; font-weight: bold; }
+.footer-sidebar { font-size: 2.5vh; color: #ccc; }
+
+/* --- 2. Contenitore delle Allerte --- */
+.contenitore-allerte {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* --- Singolo Box Allerta --- */
 .evento {
     display: flex;
     align-items: center;
-    gap: 12px; /* Spazio tra blocco icona e blocco testo */
+    gap: 15px;
     flex: 1;
     overflow: hidden;
-    padding: 5px; /* Piccolo padding interno */
 }
 
-/* --- Contenitore dell'Icona (il quadrato colorato) --- */
 .icona-container {
-    height: 80%;
-    aspect-ratio: 1 / 1; /* Forza il contenitore ad essere un quadrato */
+    height: 100%;
+    aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
-    padding: 8px;
-    flex-shrink: 0; /* Impedisce al quadrato di rimpicciolirsi */
+    border-radius: 18px;
+    padding: 10px;
+    flex-shrink: 0;
 }
 
-/* --- Icona (l'immagine SVG/PNG) --- */
+/* *** MODIFICA APPLICATA QUI *** */
 .icona {
     width: 100%;
     height: 100%;
-    /* TRUCCO: Questo CSS trasforma un'icona nera in una bianca */
-    filter: brightness(0) invert(1);
+    /* La riga "filter" è stata rimossa per supportare correttamente gli SVG */
 }
 
-/* --- Contenitore del Testo --- */
 .testo {
     display: flex;
-    flex-direction: column; /* Mette i testi uno sopra l'altro */
-    justify-content: center; /* Centra verticalmente le linee di testo */
-    height: 100%;
-    line-height: 1.1;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2;
 }
 
-/* --- Stile Testi --- */
-.testo-primario, .testo-secondario {
-    font-weight: bold;
+/* --- Stili per le 3 righe di testo --- */
+.testo-primario, .testo-secondario, .testo-terziario {
     text-transform: uppercase;
-    font-size: 8vh; /* Puoi aggiustare questo valore */
+    font-weight: bold;
 }
 
-.testo-secondario {
-    color: white; /* Il testo secondario è sempre bianco */
-}
+.testo-primario { font-size: 3.5vh; }
+.testo-secondario { font-size: 3.5vh; color: white; }
+.testo-terziario { font-size: 3vh; color: #ccc; }
 
-/* --- Classi per Colori Sfondo Icona --- */
-.green { background-color: #00db00; }
-.yellow { background-color: #eccd01; }
-.orange { background-color: #f69204; }
-.red { background-color: #f00c13; }
+/* --- Classi Colori --- */
+.green { background-color: #00C853; }
+.yellow { background-color: #FFC400; }
+.orange { background-color: #FF9900; }
+.red { background-color: #CC3333; }
 .white { background-color: #333333; }
 
-/* --- Classi per Colori Testo Primario --- */
-.green-text { color: #00db00; }
-.yellow-text { color: #eccd01; }
-.orange-text { color: #f69204; }
-.red-text { color: #f00c13; }
+.green-text { color: #00C853; }
+.yellow-text { color: #FFC400; }
+.orange-text { color: #FF9900; }
+.red-text { color: #CC3333; }
 .white-text { color: #CCCCCC; }
