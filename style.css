@@ -69,7 +69,7 @@ html, body {
 .testo-primario, .testo-secondario {
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 12vh; /* Puoi aggiustare questo valore */
+    font-size: 8vh; /* Puoi aggiustare questo valore */
 }
 
 .testo-secondario {
