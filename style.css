@@ -78,14 +78,14 @@ html, body {
 
 /* --- Classi per Colori Sfondo Icona --- */
 .green { background-color: #00db00; }
-.yellow { background-color: #FFC400; }
-.orange { background-color: #FF9900; }
-.red { background-color: #CC3333; }
+.yellow { background-color: #eccd01; }
+.orange { background-color: #f69204; }
+.red { background-color: #f00c13; }
 .white { background-color: #333333; }
 
 /* --- Classi per Colori Testo Primario --- */
 .green-text { color: #00db00; }
-.yellow-text { color: #FFC400; }
-.orange-text { color: #FF9900; }
-.red-text { color: #CC3333; }
+.yellow-text { color: #eccd01; }
+.orange-text { color: #f69204; }
+.red-text { color: #f00c13; }
 .white-text { color: #CCCCCC; }
