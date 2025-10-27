@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // --- CONFIGURAZIONE (invariata) ---
+    // --- CONFIGURAZIONE ---
     const googleSheetCsvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQRYZz5cm8M6XWpz9aFh62Pw-2q-7pIpViKFV_Zv4qlJMWYTQwg2zMW9L1U_s3QfPdrQtNPvmD8cBUx/pub?gid=62264278&single=true&output=csv";
     const eventiDaMostrare = ['mareggiate', 'vento'];
 
@@ -12,15 +12,17 @@ document.addEventListener('DOMContentLoaded', function() {
         "Bianca": "white"
     };
 
+    // *** INIZIO SEZIONE MODIFICATA ***
+    // Ho cambiato le estensioni dei file da .png a .svg
     const eventiInfo = {
-        'idrogeologica': { testo: 'IDRO-GEOLOGICO', icona: 'idrogeologico.png' },
-        'idraulica': { testo: 'IDRAULICO', icona: 'idraulico.png' },
-        'temporali': { testo: 'TEMPORALI', icona: 'temporali.png' },
-        'vento': { testo: 'VENTO', icona: 'vento.png' },
-        'neve': { testo: 'NEVE', icona: 'neve.png' },
-        'mareggiate': { testo: 'MAREGGIATE', icona: 'mareggiate.png' }
+        'idrogeologica': { testo: 'IDRO-GEOLOGICO', icona: 'idrogeologico.svg' },
+        'idraulica': { testo: 'IDRAULICO', icona: 'idraulico.svg' },
+        'temporali': { testo: 'TEMPORALI', icona: 'temporali.svg' },
+        'vento': { testo: 'VENTO', icona: 'vento.svg' },
+        'neve': { testo: 'NEVE', icona: 'neve.svg' },
+        'mareggiate': { testo: 'MAREGGIATE', icona: 'mareggiate.svg' }
     };
-    // --- FINE CONFIGURAZIONE ---
+    // *** FINE SEZIONE MODIFICATA ***
 
     async function caricaEVisualizzaAllerte() {
         try {
@@ -50,19 +52,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 const testoPrimario = (colore === 'green' || colore === 'white') ? 'NO ALLARME' : 'ALLARME';
                 const testoSecondario = info.testo;
 
-                // *** INIZIO SEZIONE MODIFICATA ***
-                // Qui creiamo la nuova struttura HTML che corrisponde al nuovo CSS.
-
                 const divEvento = document.createElement('div');
-                // L'evento ora non ha più il colore di sfondo, è solo un contenitore.
                 divEvento.className = 'evento'; 
                 
-                // Creiamo l'innerHTML con la nuova struttura:
-                // - Un .icona-container a cui diamo il colore di sfondo.
-                // - Un .testo con due <span> interni per i colori separati.
+                // *** NOTA AGGIUNTIVA ***
+                // Assicurati che le icone si trovino in una cartella chiamata 'immagini'
+                // Se sono nella stessa cartella dell'HTML, togli "immagini/" da qui sotto.
                 divEvento.innerHTML = `
                     <div class="icona-container ${colore}">
-                        <img src="${info.icona}" class="icona" alt="Icona ${testoSecondario}">
+                        <img src="immagini/${info.icona}" class="icona" alt="Icona ${testoSecondario}">
                     </div>
                     <div class="testo">
                         <span class="testo-primario ${colore}-text">${testoPrimario}</span>
@@ -71,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
                 
                 container.appendChild(divEvento);
-                // *** FINE SEZIONE MODIFICATA ***
             });
 
         } catch (error) {
@@ -81,5 +78,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     caricaEVisualizzaAllerte();
-    setInterval(caricaEVisualizzaAllerte, 900000);
+    setInterval(caricaEVisualizzaAllerte, 900000); // Aggiorna ogni 15 minuti
 });
