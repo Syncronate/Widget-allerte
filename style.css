@@ -77,14 +77,14 @@ html, body {
 }
 
 /* --- Classi per Colori Sfondo Icona --- */
-.green { background-color: #009966; }
+.green { background-color: #00db00; }
 .yellow { background-color: #FFC400; }
 .orange { background-color: #FF9900; }
 .red { background-color: #CC3333; }
 .white { background-color: #333333; }
 
 /* --- Classi per Colori Testo Primario --- */
-.green-text { color: #009966; }
+.green-text { color: #00db00; }
 .yellow-text { color: #FFC400; }
 .orange-text { color: #FF9900; }
 .red-text { color: #CC3333; }
