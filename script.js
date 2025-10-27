@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // --- CONFIGURAZIONE ---
     const googleSheetCsvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQRYZz5cm8M6XWpz9aFh62Pw-2q-7pIpViKFV_Zv4qlJMWYTQwg2zMW9L1U_s3QfPdrQtNPvmD8cBUx/pub?gid=62264278&single=true&output=csv";
-    const eventiDaMostrare = ['mareggiate', 'vento'];
+    const eventiDaMostrare = ['vento', 'mareggiate', 'neve'];
 
     const mappaColori = {
         "Rossa": "red",
