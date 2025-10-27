@@ -38,7 +38,7 @@ html, body {
 
 /* --- Contenitore dell'Icona (il quadrato colorato) --- */
 .icona-container {
-    height: 70%;
+    height: 90%;
     aspect-ratio: 1 / 1; /* Forza il contenitore ad essere un quadrato */
     display: flex;
     align-items: center;
