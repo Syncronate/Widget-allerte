@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // *** INIZIO SEZIONE MODIFICATA ***
     // Ho cambiato le estensioni dei file da .png a .svg
     const eventiInfo = {
-    'idrogeologica': { testo: 'RISCHIO IDROGEOLOGICO', dettaglio: 'FRANE VALANGHE', icona: 'immagini/idrogeologico.png' },
-    'idraulica':     { testo: 'RISCHIO IDRAULICO', dettaglio: 'ALLAGAMENTI', icona: 'immagini/idraulico.png' },
-    'temporali':     { testo: 'RISCHIO TEMPORALI', dettaglio: 'FULMINI GRANDINE', icona: 'immagini/temporali.png' },
-    'vento':         { testo: 'RISCHIO VENTO', dettaglio: 'RAFFICHE FORTI', icona: 'immagini/vento.png' },
-    'neve':          { testo: 'RISCHIO NEVE', dettaglio: 'ACCUMULI ABBONDANTI', icona: 'immagini/neve.png' },
-    'mareggiate':    { testo: 'RISCHIO MAREGGIATE', dettaglio: 'ONDE PERICOLOSE', icona: 'immagini/mareggiate.png' }
+    'idrogeologica': { testo: 'RISCHIO IDROGEOLOGICO', dettaglio: 'FRANE VALANGHE', icona: 'immagini/idrogeologico.svg' },
+    'idraulica':     { testo: 'RISCHIO IDRAULICO', dettaglio: 'ALLAGAMENTI', icona: 'immagini/idraulico.svg' },
+    'temporali':     { testo: 'RISCHIO TEMPORALI', dettaglio: 'FULMINI GRANDINE', icona: 'immagini/temporali.svg' },
+    'vento':         { testo: 'RISCHIO VENTO', dettaglio: 'RAFFICHE FORTI', icona: 'immagini/vento.svg' },
+    'neve':          { testo: 'RISCHIO NEVE', dettaglio: 'ACCUMULI ABBONDANTI', icona: 'immagini/neve.svg' },
+    'mareggiate':    { testo: 'RISCHIO MAREGGIATE', dettaglio: 'ONDE PERICOLOSE', icona: 'immagini/mareggiate.svg' }
 };
     // *** FINE SEZIONE MODIFICATA ***
 
