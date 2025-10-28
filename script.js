@@ -78,5 +78,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     caricaEVisualizzaAllerte();
-    setInterval(caricaEVisualizzaAllerte, 900000); // Aggiorna ogni 15 minuti
+    setInterval(caricaEVisualizzaAllerte, 60000); // Aggiorna ogni 15 minuti
 });
